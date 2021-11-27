@@ -43,6 +43,7 @@ body {
         line-height: 20px;
         color: #ffffff;
           span {
+            cursor:pointer;
             &:nth-of-type(1){
               margin-right:37px;
 
@@ -54,16 +55,35 @@ body {
         position: absolute;
         top: 161px;
         left: 34px;
-        width: 332px;
+        width: 84%;
         height: 38px;
         background: #FFFFFF;
         border-radius: 4px;
     }
+    .selectbox-endpoint{
+      position: absolute;
+      top: 161px;
+      left: 34px;
+      width: 332px;
+      height: 95px;
+      .start-point{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+
+      }
+    }
+
     .selectbox{
+      display: none;
+      input{
+        position: relative;
+      }
       span{
       position: absolute;
-      top: 167px;
-      left: 337px;
+      top: 75.2%;
+      left: 85.3%;
 
       }
     }

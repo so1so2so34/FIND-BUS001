@@ -51,6 +51,10 @@ body {
   color: #ffffff;
 }
 
+.container-fluid .nav .nav-head .select-tab span {
+  cursor: pointer;
+}
+
 .container-fluid .nav .nav-head .select-tab span:nth-of-type(1) {
   margin-right: 37px;
 }
@@ -59,16 +63,41 @@ body {
   position: absolute;
   top: 161px;
   left: 34px;
-  width: 332px;
+  width: 84%;
   height: 38px;
   background: #FFFFFF;
   border-radius: 4px;
 }
 
+.container-fluid .nav .nav-head .selectbox-endpoint {
+  position: absolute;
+  top: 161px;
+  left: 34px;
+  width: 332px;
+  height: 95px;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .start-point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-fluid .nav .nav-head .selectbox {
+  display: none;
+}
+
+.container-fluid .nav .nav-head .selectbox input {
+  position: relative;
+}
+
 .container-fluid .nav .nav-head .selectbox span {
   position: absolute;
-  top: 167px;
-  left: 337px;
+  top: 75.2%;
+  left: 85.3%;
 }
 
 .container-fluid .nav .nav-body {
