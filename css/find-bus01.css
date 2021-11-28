@@ -28,8 +28,8 @@ body {
 
 .container-fluid .nav .nav-head .logotext {
   position: absolute;
-  top: 17px;
-  left: 34px;
+  top: 5.7%;
+  left: 8.6%;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -41,8 +41,8 @@ body {
 
 .container-fluid .nav .nav-head .select-tab {
   position: absolute;
-  top: 95px;
-  left: 34px;
+  top: 31.98%;
+  left: 8.6%;
   font-family: Noto Sans TC;
   font-style: normal;
   font-weight: normal;
@@ -59,31 +59,64 @@ body {
   margin-right: 37px;
 }
 
-.container-fluid .nav .nav-head input {
-  position: absolute;
-  top: 161px;
-  left: 34px;
-  width: 84%;
-  height: 38px;
-  background: #FFFFFF;
-  border-radius: 4px;
-}
-
 .container-fluid .nav .nav-head .selectbox-endpoint {
   position: absolute;
-  top: 161px;
-  left: 34px;
-  width: 332px;
-  height: 95px;
+  top: 54.2%;
+  left: 8.6%;
+  width: 84%;
+  height: 31.98%;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .arrive {
+  position: absolute;
+  top: 34%;
+  left: 1.44%;
 }
 
 .container-fluid .nav .nav-head .selectbox-endpoint .start-point {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 100%;
+  height: 40%;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .start-point span {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .start-point input {
+  position: absolute;
+  top: 0;
+  left: 9.63%;
+  width: 90.3%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .end-point {
+  position: relative;
+  top: 17px;
+  left: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .end-point span {
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.container-fluid .nav .nav-head .selectbox-endpoint .end-point input {
+  position: absolute;
+  top: 0;
+  left: 9.63%;
+  width: 90.3%;
+  height: 100%;
+  border-radius: 4px;
 }
 
 .container-fluid .nav .nav-head .selectbox {
@@ -101,6 +134,7 @@ body {
 }
 
 .container-fluid .nav .nav-body {
+  display: none;
   position: relative;
   background-color: #ffffff;
   width: 100%;
