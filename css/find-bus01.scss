@@ -3,10 +3,12 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+
 .container-fluid {
   width: 100vw;
   height: 100vh;
-  background-color: bisque;
+  background-color: bisque; 
   
 
   .nav {
@@ -42,11 +44,14 @@ body {
         font-size: 14px;
         line-height: 20px;
         color: #ffffff;
+        .selectroad .active{
+          color: aqua;
+        }
           span {
             cursor:pointer;
+            
             &:nth-of-type(1){
               margin-right:37px;
-
             }
           }
 
@@ -116,14 +121,25 @@ body {
     }
 
     .selectbox{
-      display: none;
+        position: absolute;
+        top:54.2%;
+        left:8.6% ;
+        width: 84.05%;
+        height: 17.1%;
+     
       input{
         position: relative;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+       
       }
       span{
       position: absolute;
-      top: 75.2%;
-      left: 85.3%;
+      top: 18%;
+      left: 88.3%;
 
       }
     }
@@ -138,3 +154,14 @@ body {
   }
 }
 }
+.mystyle{
+  color:#70BAff;
+  border-bottom: solid 3px #70BAff;
+  transition: 0.25s;
+}
+.yourstyle{
+  display: none;
+}
+// .nav-head .navstyle{
+//   height:147px ;
+// }

@@ -17,8 +17,8 @@
                     <p>F<span class="text-primary">i</span>ND BUS</p>
                     </div>
                    <div class="select-tab">
-                       <span class="select-point">搜尋起點終點</span>
-                       <span class="select-road">輸入公車路線</span>
+                       <span class="selectpoint">搜尋起點終點</span>
+                       <span class="selectroad mystyle">輸入公車路線</span>
                     </div>
                     <div class="selectbox-endpoint">
                         <div class="start-point">
@@ -42,7 +42,7 @@
                         <input type="text" value=" 終點 " placeholder="搜尋" required>
                     </div>
                     </div>
-                    <div class="selectbox">
+                    <div class="selectbox yourstyle">
                         <input type="text"  placeholder="搜尋" required>
                         <span>
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -58,12 +58,29 @@
     </div>
     
     <script>
-         var point = document.querySelector(".select-point");
-         var road = document.querySelector(".select-road");
-         point.addEventListener(click,function(){
-              
-         })
+         var point = document.querySelector('.selectpoint');
+         var road = document.querySelector('.selectroad');
+         var sbox = document.querySelector('.selectbox');
+         var spoint = document.querySelector('.selectbox-endpoint');
+         var nhead = document.querySelector('.nav-head');
 
+         road.onclick=function(){
+            point.classList.remove("mystyle");
+            road.classList.add("mystyle");
+            spoint.classList.remove("yourstyle");
+            sbox.classList.add("yourstyle");
+            // nhead.classList.remove("navstyle");
+
+         }
+         point.onclick=function(){
+            road.classList.remove("mystyle");
+            point.classList.add("mystyle");
+            sbox.classList.remove("yourstyle");
+            spoint.classList.add("yourstyle");
+            // nhead.classList.add("navstyle");
+            
+        }
+        
 
     </script>
 </body>
