@@ -27,7 +27,7 @@
                                     <circle cx="6.5" cy="6.5" r="5.75" stroke="white" stroke-width="1.5"/>
                                 </svg>
                             </span>
-                                <input type="text" value=" 起點 " placeholder="搜尋" required>
+                                <input type="text"  placeholder="起點" required>
                     </div>
                     <span class="arrive"><svg width="2" height="33" viewBox="0 0 2 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="0.75" y1="0.75" x2="0.749999" y2="32.25" stroke="#BFBFBF" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
@@ -39,7 +39,7 @@
                                 <circle cx="6.5" cy="6.5" r="6.5" fill="#70BAFF"/>
                             </svg>
                         </span>
-                        <input type="text" value=" 終點 " placeholder="搜尋" required>
+                        <input type="text"  placeholder="終點" required>
                     </div>
                     </div>
                     <div class="selectbox yourstyle">
@@ -79,6 +79,56 @@
             spoint.classList.add("yourstyle");
             // nhead.classList.add("navstyle");
             
+        }
+
+        // get bus 到站資料
+        let busData = [];
+        let goData = [];
+        let backData = [];
+        const searchBtn = document.querySelector('#searchBtn');
+
+        function getBus(){
+            axios({
+                method: 'get',
+                url:'',
+                headers:GetAuthorizationHeader()
+            })
+            .then((response)=>{
+                console.log('預估',response);
+                const data = response.data;
+
+                //篩出有再跑的公車(存公車物件)
+                const bus = data.filter((item)=>item.PlateNumb)
+
+                //從有在跑的公車資訊裡分類出[去程0]跟[返程1]
+                const cachegoData = bus.filter((item)=>!item.Direction);
+                const cachebackData =  bus.filter((item)=>item.Direction);
+
+                console.log('cachebackData',cachebackData);
+
+                //組成我要的格式
+                cachebackData.foreach((item)=>{
+                    const index = backData.map(item => item.plateNumb).indexOf(item,PlateNumb)
+
+                    if(index===-1){
+                        backData.push({
+                            plateNumb: item.PlateNumb,//車牌號碼
+                            stops:[{
+                                estimateTime: item.estimateTime,//到站預估時間
+                                stopUID: item.StopUID//站牌唯一識別代碼
+                            }]
+                        })
+                    }else{
+                        backData[index].stops.push({
+                            estimateTime: item.EstimateTime,//到站時間預估
+                            stopUID: item.StopUID//站牌唯一識別代碼
+                        });
+                    }
+                })
+                console.log('backData',backData);
+            })
+
+
         }
         
 

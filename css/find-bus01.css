@@ -144,10 +144,10 @@ body {
   position: absolute;
   top: 18%;
   left: 88.3%;
+  cursor: pointer;
 }
 
 .container-fluid .nav .nav-body {
-  display: none;
   position: relative;
   background-color: #ffffff;
   width: 100%;
